@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">FroggerGame</string>
+    <string name="play">Play</string>
+    <string name="salut">SALUT</string>
+    <string name="flyyyy">Flyyyy</string>
+    <string name="jouer">Jouer</string>
+    <string name="highscore">Highscore</string>
+
+    <string name="main_value_of_x">Valeur de X: %f</string>
+    <string name="main_value_of_y">Valeur de Y: %f</string>
+    <string name="main_value_of_z">Valeur de Z: %f</string>
+    <string name="main_front_or_back">Avant ou arrière: %s</string>
+    <string name="main_front">Avant</string>
+    <string name="main_back">Arrière</string>
+    <string name="main_left_or_right">Gauche ou droite: %s</string>
+    <string name="main_left">Gauche</string>
+    <string name="main_right">Droite</string>
+    <string name="editText_value">Enter your name</string>
+    <string name="button1">ok</string>
+    <string name="text_view_0">Just click you idiot</string>
+    <string name="text_view_1">Nothing happened...</string>
+
+</resources>
