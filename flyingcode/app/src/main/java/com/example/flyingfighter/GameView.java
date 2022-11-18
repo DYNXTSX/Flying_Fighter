@@ -24,7 +24,7 @@ import java.util.Random;
 
 /**
  * Classe [GameView]
- * @description Cette classe va permettre l'affichage du jeu
+ * @description Classe durant laquelle on est en cours de jeu
  *
  * (thread) > thread du jeu
  * (boolean) isPlaying, isGameOver > booléens pour gérer la fin du jeu

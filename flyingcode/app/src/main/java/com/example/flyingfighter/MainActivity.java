@@ -15,7 +15,11 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-
+/**
+ * Classe [MainActivity]
+ * @description classe du menu principal au démarrage du jeu
+ *
+ */
 public class MainActivity extends AppCompatActivity {
 
     private boolean isMute;
@@ -84,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
         });*/
     }
 
+    /**
+     * Cette méthode va permettre de changer le background en fonction de l'heure de la journée.
+     */
     protected void changeBg(){
         Calendar calendar = Calendar.getInstance();
         int hour24hrs = calendar.get(Calendar.HOUR_OF_DAY);
