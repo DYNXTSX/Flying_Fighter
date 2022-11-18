@@ -20,6 +20,7 @@ public class Laser {
     Laser(Resources res) {
         laser = BitmapFactory.decodeResource(res, R.drawable.laser); //On créé le bitmap
 
+        //On a souvent le type de code ci-dessous (jusqu'à ligne 31), c'est pour réduire la taille des images et les adapter à l'écran du téléphone sur lequel le jeu est lancé
         width = laser.getWidth();
         height = laser.getHeight();
 
