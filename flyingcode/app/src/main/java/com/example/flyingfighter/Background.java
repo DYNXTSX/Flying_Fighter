@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory;
  * @description cette classe permet la gestion du background en jeu. Cette classe possède un x, un y et le background.
  * on créé un constructeur qui va prendre la taille de l'écran en x et en y
  * On a également un attribut ressource qui va décoder le bitmap du drawable folder
+ * On utilise un surface view pour changer de background rapidement
  *
  * (int) x > coordonnées x
  * (int) y > coordonnées y

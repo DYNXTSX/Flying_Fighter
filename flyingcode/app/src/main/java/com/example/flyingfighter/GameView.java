@@ -24,7 +24,7 @@ import java.util.Random;
 
 /**
  * Classe [GameView]
- * @description Classe durant laquelle on est en cours de jeu
+ * @description Classe qui va permettre l'affichage du jeu lorsqu'on est en pleine partie. le moteur est géré par GameActivity
  *
  * (thread) > thread du jeu
  * (boolean) isPlaying, isGameOver > booléens pour gérer la fin du jeu
