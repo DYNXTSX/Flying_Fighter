@@ -9,54 +9,61 @@ import android.graphics.BitmapFactory;
 import android.graphics.Rect;
 
 public class Flight {
-
     int toLaser = 0;
     boolean isGoingUp = false;
-    int x, y, width, height, wingCounter = 0, laserCounter = 1;
-    Bitmap flight1, flight2, laser1, laser2, laser3, laser4, laser5, dead;
+    int x, y, width, height, wingCounter = 0, laserCounter = 1, deadCounter = 1;
+    Bitmap flight1, laser1, dead1, dead2, dead3, dead4, dead5, dead6, dead7, dead8, dead9, dead10, dead11;
     private GameView gameView;
 
     Flight(GameView gameView,int screenY, Resources res) {
-
         this.gameView = gameView;
 
-        flight1 = BitmapFactory.decodeResource(res, R.drawable.fly1);
-        flight2 = BitmapFactory.decodeResource(res, R.drawable.fly1);
+        flight1 = BitmapFactory.decodeResource(res, R.drawable.avion_rouge_2);
 
         width = flight1.getWidth();
         height = flight1.getHeight();
 
-        width /= 4;
-        height /= 4;
+        width /= 40;
+        height /= 40;
 
         width = (int) (width * screenRatioX * 8);
         height = (int) (height * screenRatioY * 8);
 
         flight1 = Bitmap.createScaledBitmap(flight1, width, height, false);
-        flight2 = Bitmap.createScaledBitmap(flight2, width, height, false);
 
         y = screenY / 2;
         x = (int) (64 * screenRatioX);
 
-        laser1 = BitmapFactory.decodeResource(res, R.drawable.tir1);
-        laser2 = BitmapFactory.decodeResource(res, R.drawable.tir2);
-        laser3 = BitmapFactory.decodeResource(res, R.drawable.tir3);
-        laser4 = BitmapFactory.decodeResource(res, R.drawable.tir4);
-        laser5 = BitmapFactory.decodeResource(res, R.drawable.tir5);
+        laser1 = BitmapFactory.decodeResource(res, R.drawable.avion_rouge_tire_1);
 
         laser1 = Bitmap.createScaledBitmap(laser1, width, height, false);
-        laser2 = Bitmap.createScaledBitmap(laser2, width, height, false);
-        laser3 = Bitmap.createScaledBitmap(laser3, width, height, false);
-        laser4 = Bitmap.createScaledBitmap(laser4, width, height, false);
-        laser5 = Bitmap.createScaledBitmap(laser5, width, height, false);
 
-        dead = BitmapFactory.decodeResource(res, R.drawable.dead);
-        dead = Bitmap.createScaledBitmap(dead, width, height, false);
+        dead1 = BitmapFactory.decodeResource(res, R.drawable.dead1);
+        dead2 = BitmapFactory.decodeResource(res, R.drawable.dead2);
+        dead3 = BitmapFactory.decodeResource(res, R.drawable.dead3);
+        dead4 = BitmapFactory.decodeResource(res, R.drawable.dead4);
+        dead5 = BitmapFactory.decodeResource(res, R.drawable.dead5);
+        dead6 = BitmapFactory.decodeResource(res, R.drawable.dead6);
+        dead7 = BitmapFactory.decodeResource(res, R.drawable.dead7);
+        dead8 = BitmapFactory.decodeResource(res, R.drawable.dead8);
+        dead9 = BitmapFactory.decodeResource(res, R.drawable.dead9);
+        dead10 = BitmapFactory.decodeResource(res, R.drawable.dead10);
+        dead11 = BitmapFactory.decodeResource(res, R.drawable.dead11);
 
+        dead1 = Bitmap.createScaledBitmap(dead1, width, height, false);
+        dead2 = Bitmap.createScaledBitmap(dead2, width, height, false);
+        dead3 = Bitmap.createScaledBitmap(dead3, width, height, false);
+        dead4 = Bitmap.createScaledBitmap(dead4, width, height, false);
+        dead5 = Bitmap.createScaledBitmap(dead5, width, height, false);
+        dead6 = Bitmap.createScaledBitmap(dead6, width, height, false);
+        dead7 = Bitmap.createScaledBitmap(dead7, width, height, false);
+        dead8 = Bitmap.createScaledBitmap(dead8, width, height, false);
+        dead9 = Bitmap.createScaledBitmap(dead9, width, height, false);
+        dead10 = Bitmap.createScaledBitmap(dead10, width, height, false);
+        dead11 = Bitmap.createScaledBitmap(dead11, width, height, false);
     }
 
     Bitmap getFlight () {
-
         if(toLaser != 0){
 
             if(laserCounter == 1){
@@ -64,26 +71,11 @@ public class Flight {
                 return  laser1;
             }
 
-            if(laserCounter == 2){
-                laserCounter ++;
-                return  laser2;
-            }
-
-            if(laserCounter == 3){
-                laserCounter ++;
-                return  laser3;
-            }
-
-            if(laserCounter == 4){
-                laserCounter ++;
-                return  laser4;
-            }
 
             laserCounter = 1;
             toLaser--;
             gameView.newBullet();
 
-            return laser5;
         }
 
         if(wingCounter == 0){
@@ -93,7 +85,7 @@ public class Flight {
 
         wingCounter --;
 
-        return flight2;
+        return flight1;
     }
 
     Rect getCollisionShape () {
@@ -101,6 +93,6 @@ public class Flight {
     }
 
     Bitmap getDead() {
-        return dead;
+        return dead6;
     }
 }

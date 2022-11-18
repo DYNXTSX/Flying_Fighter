@@ -14,7 +14,6 @@ public class Laser {
     Bitmap laser;
 
     Laser(Resources res) {
-
         laser = BitmapFactory.decodeResource(res, R.drawable.laser);
 
         width = laser.getWidth();

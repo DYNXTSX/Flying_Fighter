@@ -10,6 +10,7 @@ import android.graphics.Rect;
 
 public class Ennemi {
 
+
     public int speed = 20;
     public boolean wasShot = true;
     int x = 0, y, width, height, Ennemicounter = 1;

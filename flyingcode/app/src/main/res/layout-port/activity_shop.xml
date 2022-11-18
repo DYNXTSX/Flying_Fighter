@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FECA47"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Shop"
+        android:textSize="75sp" />
+
+    <TextView
+        android:id="@+id/tv_coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text="100"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="113dp"
+        android:layout_toRightOf="@+id/tv_coins"
+        android:src="@drawable/diamonds" />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/jouer" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/shopP1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/avion_rouge_2" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shopP2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/avion_rouge_2" />
+
+                <RelativeLayout
+                    android:id="@+id/unlock2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#c26c6b6b">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="LOCKED"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/price2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="30"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="3dp"
+                        android:layout_toRightOf="@+id/price2"
+                        android:src="@drawable/diamonds" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/shopP3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/avion_rouge_2" />
+
+                <RelativeLayout
+                    android:id="@+id/unlock3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#c26c6b6b">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="LOCKED"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/price3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="50"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="3dp"
+                        android:layout_toRightOf="@+id/price3"
+                        android:src="@drawable/diamonds" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shopP4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/avion_rouge_2" />
+
+                <RelativeLayout
+                    android:id="@+id/unlock4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#c26c6b6b">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="LOCKED"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/price4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="80"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="3dp"
+                        android:layout_toRightOf="@+id/price4"
+                        android:src="@drawable/diamonds" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

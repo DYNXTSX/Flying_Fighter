@@ -240,7 +240,6 @@ public class GameView extends SurfaceView implements Runnable {
                 getHolder().unlockCanvasAndPost(canvas);
                 saveIfHighScore();
                 waitBeforeExiting();
-
                 return;
             }
 
