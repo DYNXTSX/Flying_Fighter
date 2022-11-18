@@ -8,6 +8,24 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Rect;
 
+/**
+ * Classe [Flight]
+ * @description cette classe représente le personnage principal (l'avion) que le joueur incarne
+ *
+ *
+ * (int) toLaser > tir de l'avion
+ * (int) x > position avion x
+ * (int) y > position avion y
+ * (int) width > largeur ennemi
+ * (int) height > taille ennemi
+ * (int) wingCounter > compteur
+ * (int) laserCounter > compteur de tirs
+ * (int) deadCounter > compteur de morts
+ * (boolean) isGoingup > booléen qui nous permet de savoir si l'avion prend de l'altitude ou non
+ * (Bitmap) flight1, laser1, dead1, dead2, dead3, dead4, dead5, dead6, dead7, dead8, dead9, dead10, dead11; > Format d'image
+ *
+ */
+
 public class Flight {
     int toLaser = 0;
     boolean isGoingUp = false;
@@ -23,15 +41,15 @@ public class Flight {
         width = flight1.getWidth();
         height = flight1.getHeight();
 
-        width /= 40;
+        width /= 40; //réduire taille de l'image
         height /= 40;
 
         width = (int) (width * screenRatioX * 8);
         height = (int) (height * screenRatioY * 8);
 
-        flight1 = Bitmap.createScaledBitmap(flight1, width, height, false);
+        flight1 = Bitmap.createScaledBitmap(flight1, width, height, false); //on la resize
 
-        y = screenY / 2;
+        y = screenY / 2; //position de flight au démarrage du jeu
         x = (int) (64 * screenRatioX);
 
         laser1 = BitmapFactory.decodeResource(res, R.drawable.avion_rouge_tire_1);
@@ -63,6 +81,11 @@ public class Flight {
         dead11 = Bitmap.createScaledBitmap(dead11, width, height, false);
     }
 
+    /**
+     *  Cette fonction va être appelée quand on va dessiner l'avion sur les canvas,
+     *  pour wingcounter : la premiere fois que la fonction va etre appelée, il va démarrer à 0 et monter puis continuer tant que le jeu est démarré.
+     *
+     */
     Bitmap getFlight () {
         if(toLaser != 0){
 
@@ -88,10 +111,16 @@ public class Flight {
         return flight1;
     }
 
+    /**
+     * Retourne un objet de Rect (cela créé un rectangle autour de flight pour gérer les collisions)
+     */
     Rect getCollisionShape () {
         return new Rect(x, y, x + width, y + height);
     }
 
+    /**
+     * Cette fonction retourne le bitmap Dead
+     */
     Bitmap getDead() {
         return dead6;
     }
