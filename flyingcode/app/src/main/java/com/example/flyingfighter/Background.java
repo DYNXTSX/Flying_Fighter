@@ -6,10 +6,12 @@ import android.graphics.BitmapFactory;
 
 /**
  * Classe [Background]
- * @description cette classe permet la gestion du background en jeu.
+ * @description cette classe permet la gestion du background en jeu. Cette classe possède un x, un y et le background.
+ * on créé un constructeur qui va prendre la taille de l'écran en x et en y
+ * On a également un attribut ressource qui va décoder le bitmap du drawable folder
  *
  * (int) x > coordonnées x
- * (int) y >
+ * (int) y > coordonnées y
  * (Bitmap) background > Format d'image
  */
 public class Background {
@@ -17,7 +19,7 @@ public class Background {
     Bitmap background;
 
     Background (int screenX, int screenY, Resources res){
-        background = BitmapFactory.decodeResource(res, R.drawable.background1);
-        background = Bitmap.createScaledBitmap(background, screenX,screenY, false);
+        background = BitmapFactory.decodeResource(res, R.drawable.background1);          //le background est instancié
+        background = Bitmap.createScaledBitmap(background, screenX,screenY, false); //on le re size pour qu'il passe entièrement dans l'écran
     }
 }
