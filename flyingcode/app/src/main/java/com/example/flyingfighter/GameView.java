@@ -97,7 +97,7 @@ public class GameView extends SurfaceView implements Runnable {
             action = R.drawable.avion_rouge_2;
         }else if(action == 2){
             action = R.drawable.missile;
-        }else if(action == 2){
+        }else if(action == 3){
             action = R.drawable.avion_2;
         }else{
             action = R.drawable.avion_3;
