@@ -90,8 +90,23 @@ public class GameView extends SurfaceView implements Runnable {
         background1 = new Background(screenX,screenY,getResources());
         background2 = new Background(screenX,screenY,getResources());
 
-        flight = new Flight(this, screenY, getResources());
+        final SharedPreferences settings = activity.getSharedPreferences("shop", Context.MODE_PRIVATE);
+        int action = settings.getInt("ACTION", 1);
 
+        if(action == 1){
+            action = R.drawable.avion_rouge_2;
+        }else if(action == 2){
+            action = R.drawable.missile;
+        }else if(action == 2){
+            action = R.drawable.avion_2;
+        }else{
+            action = R.drawable.avion_3;
+        }
+
+
+
+        flight = new Flight(this, screenY, getResources(), action);
+        score = getScore();
         lasers = new ArrayList<>(); //On initialise la liste des lasers dans le constructeur
 
         background2.x = screenX; //les background sont instanciés au dessus et on met le bg2 en screenX comme ça il est placé juste après la fin de l'écran sur l'axe X, le x et y sont initialisés à 0 dans la classe Bg (bg=background)
@@ -124,8 +139,8 @@ public class GameView extends SurfaceView implements Runnable {
                 float z = event.values[2];
 
                 if (z > 0.4) {
-                    flight.isGoingUp = true;
-                    tmpPos = flight.y - z * screenRatioY * 4;
+                    flight.isGoingUp = false;
+                    tmpPos = flight.y - z * screenRatioY * 2;
 
                     if(tmpPos < 0) {
                         flight.y = 0;
@@ -135,8 +150,8 @@ public class GameView extends SurfaceView implements Runnable {
                     }
                 }
                 else if(z < 0.4){
-                    flight.isGoingUp = false;
-                    tmpPos = flight.y + Math.abs(z) * screenRatioY * 4;
+                    flight.isGoingUp = true;
+                    tmpPos = flight.y + Math.abs(z) * screenRatioY * 2;
 
                     if(tmpPos >= screenY - flight.height){
                         flight.y = screenY - flight.height;
@@ -283,11 +298,17 @@ public class GameView extends SurfaceView implements Runnable {
         }
     }
 
-    private void saveIfHighScore() { //pour le highscore
+    private int getScore(){
 
-        if (prefs.getInt("highscore", 0) < score) {
+        return 0;
+    }
+
+    private void saveIfHighScore() { //pour le highscore
+        if (score != 0) {
+            int diamants = prefs.getInt("diamants", 0);
+            diamants += score;
             SharedPreferences.Editor editor = prefs.edit();
-            editor.putInt("highscore", score);
+            editor.putInt("diamants", diamants);
             editor.apply();
         }
     }
@@ -308,14 +329,14 @@ public class GameView extends SurfaceView implements Runnable {
         mSensorManager.registerListener( //on s'enregistre en tant qu'écouteur
                 accelerometerListener,
                 mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
-                SensorManager.SENSOR_DELAY_GAME  //On utilise un rythme moins rapide pour utiliser moins de CPU
+                SensorManager.SENSOR_DELAY_GAME //On utilise un rythme moins rapide pour utiliser moins de CPU
         );
         thread = new Thread(this);
         thread.start();
 
     }
     /**
-     * Cette méthode met en pause le Thread
+     * Cette méthode met en pause le Thread.
      */
     public void pause (){
         try {

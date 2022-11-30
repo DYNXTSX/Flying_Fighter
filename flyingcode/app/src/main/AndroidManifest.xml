@@ -17,6 +17,9 @@
             android:screenOrientation="landscape"
             android:theme="@style/Apptheme.noActionBar" />
         <activity
+            android:name=".ShopActivity"
+            android:theme="@style/Apptheme.noActionBar" />
+        <activity
             android:name=".MainActivity"
             android:theme="@style/Apptheme.noActionBar"
             android:exported="true">
