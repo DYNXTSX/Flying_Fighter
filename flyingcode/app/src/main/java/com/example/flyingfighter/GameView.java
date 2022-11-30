@@ -127,7 +127,7 @@ public class GameView extends SurfaceView implements Runnable {
     }
 
     /**
-     * Cette méthode sert pour le déplacement de haut en bas de l'avion en utilisant le gyroscope du téléphone.
+     * Cette méthode sert pour le déplacement de haut en bas de l'avcion en utilisant le gyroscope du téléphone.
      */
     private final SensorEventListener accelerometerListener = new SensorEventListener() {
         @Override
@@ -336,7 +336,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     }
     /**
-     * Cette méthode met en pause le Thread.
+     * Cette méthode met en pause le Thread
      */
     public void pause (){
         try {

@@ -1,9 +1,0 @@
-Application Android - Game 
-Hyacinthe FOUCHER--REYDEMANEUF et Alexandre GOLFIER 
-
-L'application android que nous allons créer est un jeu de type shooter fly.
-
-Vous incarnez une soucoupe alliée qui doit avancer et détruires des petites soucoupes ennemies en cliquant sur l'écran et en tirant avec un laser. Vous devez bouger l'écran de haut en bas pour faire monter ou descendre la soucoupe alliée afin de pouvoir se mettre au niveau des soucoupes ennemies pour les viser et leur tirer dessus. Le jeu se termine lorsque une soucoupe ennemie touche votre soucoupe alliée.
-
-Un système de score affichera votre score en fonction des soucoupes détruites et enregistrera votre score en tant qu'highscore si vous arrivez à rebattre votre score. 
-
