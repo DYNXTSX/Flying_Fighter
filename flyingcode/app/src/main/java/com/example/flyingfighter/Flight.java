@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 
 /**
  * Classe [Flight]
@@ -33,10 +34,10 @@ public class Flight {
     Bitmap flight1, laser1, dead1, dead2, dead3, dead4, dead5, dead6, dead7, dead8, dead9, dead10, dead11;
     private GameView gameView;
 
-    Flight(GameView gameView,int screenY, Resources res) {
+    Flight(GameView gameView,int screenY, Resources res, int avionImg) {
         this.gameView = gameView;
 
-        flight1 = BitmapFactory.decodeResource(res, R.drawable.avion_rouge_2);
+        flight1 = BitmapFactory.decodeResource(res, avionImg);
 
         width = flight1.getWidth();
         height = flight1.getHeight();
@@ -52,7 +53,7 @@ public class Flight {
         y = screenY / 2; //position de flight au démarrage du jeu
         x = (int) (64 * screenRatioX);
 
-        laser1 = BitmapFactory.decodeResource(res, R.drawable.avion_rouge_tire_1);
+        laser1 = BitmapFactory.decodeResource(res, avionImg);
 
         laser1 = Bitmap.createScaledBitmap(laser1, width, height, false);
 

@@ -38,13 +38,34 @@
         android:src="@drawable/shop"
         app:layout_constraintTop_toBottomOf="@+id/play"/>
 
-    <ImageView
-        android:id="@+id/score"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:src="@drawable/score"
-        app:layout_constraintTop_toBottomOf="@+id/shop"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score">
 
+        <TextView
+            android:id="@+id/diamants_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:text="100"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/tv_coins"
+            android:src="@drawable/diamonds" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

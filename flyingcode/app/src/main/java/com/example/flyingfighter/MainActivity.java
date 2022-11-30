@@ -54,6 +54,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, GameActivity.class));
             }
         });
+
+        ImageView shopBushoton = findViewById(R.id.shop);
+        shopBushoton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ShopActivity.class));
+            }
+        });
+
+
+
     }
 
     /**

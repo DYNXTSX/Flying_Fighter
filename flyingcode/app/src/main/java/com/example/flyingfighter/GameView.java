@@ -90,7 +90,22 @@ public class GameView extends SurfaceView implements Runnable {
         background1 = new Background(screenX,screenY,getResources());
         background2 = new Background(screenX,screenY,getResources());
 
-        flight = new Flight(this, screenY, getResources());
+        final SharedPreferences settings = activity.getSharedPreferences("shop", Context.MODE_PRIVATE);
+        int action = settings.getInt("ACTION", 1);
+
+        if(action == 1){
+            action = R.drawable.avion_rouge_2;
+        }else if(action == 2){
+            action = R.drawable.missile;
+        }else if(action == 2){
+            action = R.drawable.avion_2;
+        }else{
+            action = R.drawable.avion_3;
+        }
+
+
+
+        flight = new Flight(this, screenY, getResources(), action);
         score = getScore();
         lasers = new ArrayList<>(); //On initialise la liste des lasers dans le constructeur
 

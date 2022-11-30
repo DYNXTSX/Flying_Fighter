@@ -50,17 +50,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/play" />
 
-    <ImageView
-        android:id="@+id/score"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"
-        android:src="@drawable/score"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shop" />
 
     <LinearLayout
         android:layout_width="match_parent"
