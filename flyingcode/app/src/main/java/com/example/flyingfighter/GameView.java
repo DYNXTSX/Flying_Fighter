@@ -53,7 +53,7 @@ public class GameView extends SurfaceView implements Runnable {
     private GameActivity activity;
     private Background background1, background2;
 
-    private SensorManager mSensorManager;
+    private SensorManager mSensorManager; //gestionnaire de capteurs (sensorManager)
     float tmpPos;
 
     public GameView(GameActivity activity, SensorManager sensor, int screenX, int screenY) {
@@ -112,12 +112,12 @@ public class GameView extends SurfaceView implements Runnable {
     }
 
     /**
-     * Cette méthode sert pour le déplacement de haut en bas de l'avcion en utilisant le gyroscope du téléphone.
+     * Cette méthode sert pour le déplacement de haut en bas de l'avion en utilisant le gyroscope du téléphone.
      */
     private final SensorEventListener accelerometerListener = new SensorEventListener() {
         @Override
         public void onSensorChanged(SensorEvent event) {
-
+            //On récupère les valeurs du capteur, on utilisera que le z
             if(isPlaying) {
                 float x = event.values[0];
                 float y = event.values[1];
@@ -305,10 +305,10 @@ public class GameView extends SurfaceView implements Runnable {
      */
     public void resume(){
         isPlaying = true;
-        mSensorManager.registerListener(
+        mSensorManager.registerListener( //on s'enregistre en tant qu'écouteur
                 accelerometerListener,
                 mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
-                SensorManager.SENSOR_DELAY_GAME
+                SensorManager.SENSOR_DELAY_GAME  //On utilise un rythme moins rapide pour utiliser moins de CPU
         );
         thread = new Thread(this);
         thread.start();
@@ -320,7 +320,7 @@ public class GameView extends SurfaceView implements Runnable {
     public void pause (){
         try {
             isPlaying = false;
-            mSensorManager.unregisterListener(accelerometerListener);
+            mSensorManager.unregisterListener(accelerometerListener); //On désenregistre
             thread.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
