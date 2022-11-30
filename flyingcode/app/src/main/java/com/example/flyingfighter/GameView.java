@@ -336,7 +336,7 @@ public class GameView extends SurfaceView implements Runnable {
 
     }
     /**
-     * Cette méthode met en pause le Thread
+     * Cette méthode met en pause le Thread.
      */
     public void pause (){
         try {
