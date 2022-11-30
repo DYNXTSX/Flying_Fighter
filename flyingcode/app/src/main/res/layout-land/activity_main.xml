@@ -25,7 +25,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/jouer"
+        android:id="@+id/play"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:src="@drawable/jouer"
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:src="@drawable/shop"
-        app:layout_constraintTop_toBottomOf="@+id/jouer"/>
+        app:layout_constraintTop_toBottomOf="@+id/play"/>
 
     <ImageView
         android:id="@+id/score"
