@@ -12,7 +12,6 @@ import android.graphics.Rect;
  * Classe [Ennemi]
  * @description cette classe représente les ennemis dans le jeu
  *
- *
  * (int) speed > vitesse des ennemis
  * (int) x > position ennemi x
  * (int) y > position ennemi y
